@@ -9,9 +9,9 @@
   align-items: center;
 }
 
-.article.grid__item {
+/* .article.grid__item {
   padding: 0;
-}
+} */
 
 .grid--peek .article-card {
   box-sizing: border-box;
@@ -138,5 +138,93 @@
     .articles-wrapper.grid {
       margin-bottom: 7rem;
     }
+  }
+}
+
+
+/**/
+.articles .article-card-wrapper{
+      outline: 1px solid #ddd;
+    border-radius: 5px;
+ }
+.articles .article-card__image{
+      border-radius: 4px 4px 0 0;
+}
+.articles .grid__item{
+      margin-bottom: 30px;
+}
+.articles .article_tags{
+   letter-spacing: 2px;
+}
+
+@media screen and (min-width:990px){
+  .articles .blog__post:last-child .card:not(.ratio){
+      flex-direction: row;
+      align-items: center;
+    text-align: center;
+}
+  .articles .blog__post:last-child.grid__item {
+               width: calc(100% - var(--grid-desktop-horizontal-spacing)* 2 );
+        max-width: calc(100% - var(--grid-desktop-horizontal-spacing)* 2 );
+}
+  .articles .grid--2-col-desktop .blog__post:last-child.grid__item{
+    width: calc(100% - var(--grid-desktop-horizontal-spacing)* 2/ 2 );
+        max-width: calc(100% - var(--grid-desktop-horizontal-spacing)* 2 / 2 );
+  }
+.articles .blog__post:last-child .article-card__image{
+  border-radius: 0;
+}
+.articles .blog__post:last-child .card__inner{
+      width: 55%;
+}
+.articles .blog__post:last-child .card__content{
+  width: 45%;
+} 
+}
+
+@media screen and (max-width:989px){
+    .articles .grid__item {
+      margin-bottom: 20px;
+  }
+     .articles .grid--2-col-tablet .grid__item {
+        width: 50%; 
+    }
+  .articles .articles-wrapper{
+        padding: 0 50px;
+  }
+
+}
+
+@media screen and (max-width: 749px){
+  .articles .articles-wrapper{
+        padding: 0 15px;
+  }
+  .articles .grid--2-col-tablet .grid__item {
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 600px){
+  .articles .card:not(.ratio){
+        flex-direction: row;
+  }
+ .articles .card__inner {
+    width: 35%;
+}
+  .articles .card__content{
+          width: 65%;
+  }
+      .articles .grid__item {
+        margin-bottom: 10px;
+    }
+.articles .article-card-wrapper{
+      outline: 0;
+    border-radius: 0;
+ }
+.articles .article-card__image{
+      border-radius: 0;
+}
+  .articles .article_tags{
+    display: none;
   }
 }

@@ -315,6 +315,47 @@
       "default": false,
       "label": "Enable add to cart icon"
     },
+     {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style ",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default":"#000000"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
     {
       "type": "header",
       "content": "t:sections.featured-collection.settings.header_mobile.content"

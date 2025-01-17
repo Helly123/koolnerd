@@ -15,18 +15,18 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}" style="background:{{ section.settings.background_color }}; color:{{ section.settings.text_color }};">
+  <div class="newsletter__wrapper content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+   <div class="grid grid--2-col-desktop grid--1-col-tablet-down">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-        {%- when '@app' -%}
-          {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
-        {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+        <div class="grid__item">
+          <h2 class="heading" {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
+        </div>
         {%- when 'email_form' -%}
-          <div {{ block.shopify_attributes }}>
+        {% if block.settings.HTML == blank %}
+          <div {{ block.shopify_attributes }} class="grid__item">
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
@@ -48,14 +48,12 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
+                    placeholder="Your Email Address"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
-                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
+                  <button type="submit" class="newsletter-form__button field__button button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}"
+                    style="color:{{ block.settings.button_text }}; background:{{ block.settings.button_background }};">
+                    Sign Me Up
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -67,10 +65,48 @@
               {%- endif -%}
             {% endform %}
           </div>
+          {% else %}
+          <div class="grid__item">
+            {{ block.settings.HTML }}
+          </div>
+          {% endif %}
       {%- endcase -%}
     {%- endfor -%}
+   </div>
   </div>
 </div>
+<script>
+  if(document.querySelector(".scroll-count-section")){
+  const counter = document.getElementById('dynamic-counter');
+  const targetCount = parseInt(counter.getAttribute('data-count'), 10);
+  let currentCount = 0;
+  
+  const updateCounter = () => {
+    const section = counter.closest('.scroll-count-section');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+  
+    
+    if (sectionTop < windowHeight && currentCount < targetCount) {
+      const increment = Math.ceil(targetCount / 100); 
+      currentCount += increment;
+  
+     
+      if (currentCount > targetCount) {
+        currentCount = targetCount;
+      }
+  
+      counter.textContent = currentCount.toLocaleString();
+  
+     
+      setTimeout(updateCounter, 30);
+    }
+  };
+  
+  
+  window.addEventListener('scroll', updateCounter);
+}
+</script>
 
 {% schema %}
 {
@@ -79,38 +115,22 @@
   "class": "section",
   "settings": [
     {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
-    },
-    {
       "type": "checkbox",
       "id": "full_width",
-      "default": true,
+      "default": false,
       "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default":"#000"
+    },
+    {
+      "type": "color",
+      "id":"background_color",
+      "label": "Background color",
+      "default":"#fff"
     },
     {
       "type": "paragraph",
@@ -148,53 +168,41 @@
       "limit": 1,
       "settings": [
         {
-          "type": "text",
+          "type": "textarea",
           "id": "heading",
           "default": "Subscribe to our emails",
-          "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "name": "t:sections.newsletter.blocks.paragraph.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
-          "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+          "label": "t:sections.newsletter.blocks.heading.settings.heading.label",
+          "info": "please add this code for count number and add number <span id='dynamic-counter' data-count='1000' class='scroll-count-section'></span>"
         }
       ]
     },
     {
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
-      "limit": 1
-    },
-    {
-      "type": "@app"
+      "limit": 1,
+      "settings": [
+        {
+            "type": "header",
+            "content": "button"
+        },
+        {
+          "type": "color",
+          "id": "button_text",
+          "label": "Text color",
+          "default":"#fff"
+        },
+        {
+          "type": "color",
+          "id":"button_background",
+          "label": "Background color",
+          "default":"#000"
+        },
+        {
+          "type": "html",
+          "id": "HTML",
+          "label": "HTML"
+        }
+      ]
     }
   ],
   "presets": [
@@ -203,9 +211,6 @@
       "blocks": [
         {
           "type": "heading"
-        },
-        {
-          "type": "paragraph"
         },
         {
           "type": "email_form"

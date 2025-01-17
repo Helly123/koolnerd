@@ -3189,3 +3189,27 @@ details-disclosure > details {
 .drawer__inner:not(.active_tabify_drawer) {
   display: none;
 }
+/*  */
+.custom_rating{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.custom_rating .rating{
+    font-size: 20px;
+}
+.custom_rating .review_count{
+ font-size: 14px; 
+  text-decoration: underline;
+}
+/*  */
+.collection .custom_rating{
+    margin-bottom: 5px;  
+}
+.collection .custom_rating svg{
+  max-width: 100px;
+}
+.collection .custom_rating .rating {
+    font-size: 18px;
+}

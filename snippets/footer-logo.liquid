@@ -3,6 +3,11 @@
     .footer__logo a {
       height: {{ block.settings.desktop_logo_height }}px;
     }
+    @media screen and (max-width: 749px){
+      .footer__logo a {
+        height: {{ block.settings.desktop_logo_height | minus: 20 }}px;
+      }
+    }
   {% endstyle %}
   {%- assign footer_logo_size = block.settings.desktop_logo_height | prepend: 'x' -%}
   <div class="footer__logo">

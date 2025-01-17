@@ -1,0 +1,64 @@
+{% assign view = 0 %}
+{% if block.settings.menu_1 != blank %}
+  {% assign view = 1 %}
+{% endif %}
+{% if block.settings.menu_2 != blank %}
+  {% assign view = 2 %}
+  {% endif %}
+{% if block.settings.menu_3 != blank %}  
+  {% assign view = 3 %}
+{% endif %}
+{% if block.settings.show_social_icons %}  
+  {% assign view = 4 %}
+{% endif %}
+
+<div class="grid grid--{{ view }}-col-desktop grid--2-col-tablet-down">
+  {% if linklists[block.settings.menu_1].links.size > 0 %}
+    <div class="grid__item">
+      {% if block.settings.title_1 != blank %}
+        <div class="footer_title uppercase">{{ block.settings.title_1 }}</div>
+      {% endif %}
+    <ul class="no-bullets site-footer__linklist">
+      {% for link in linklists[block.settings.menu_1].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+  
+  {% if linklists[block.settings.menu_2].links.size > 0 %}
+    <div class="grid__item">
+      {% if block.settings.title_2 != blank %}
+        <div class="footer_title uppercase">{{ block.settings.title_2 }}</div>
+      {% endif %}
+      <ul class="no-bullets site-footer__linklist">
+      {% for link in linklists[block.settings.menu_2].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  {% if linklists[block.settings.menu_3].links.size > 0 %}
+    <div class="grid__item">
+      {% if block.settings.title_3 != blank %}
+        <div class="footer_title uppercase">{{ block.settings.title_3 }}</div>
+      {% endif %}
+    <ul class="no-bullets site-footer__linklist">
+      {% for link in linklists[block.settings.menu_3].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+
+  {% if block.settings.show_social_icons %}
+    <div class="grid__item">
+    {% if block.settings.social_icon_title != blank %}
+        <div class="footer_title uppercase">{{ block.settings.social_icon_title }}</div>
+      {% endif %}
+    {% render 'social-icons' %}
+    </div>
+  {% endif %}
+  
+</div>

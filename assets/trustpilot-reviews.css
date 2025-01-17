@@ -1,0 +1,52 @@
+.trustpilot_review .trustpilot_image_content_cover{
+display: flex;
+justify-content: center; 
+column-gap: 10px;
+}
+.trustpilot_review .trustpilot_star{
+     max-width: 120px; 
+}
+.trustpilot_review .trustpilot_star svg{
+    display: inline-block;
+    width: 100%;
+    height: auto; 
+    vertical-align: middle;
+}
+.trustpilot_review .trustpilot_content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.trustpilot_review .trustpilot_image{
+      width: 100%;
+    max-width: 50px;
+}
+.trustpilot_review .trustpilot_image img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;  
+    border-radius: 50%;
+}
+.trustpilot_review .trustpilot_date{
+      font-size: 14px;
+}
+.trustpilot_review .poweredby_cover {
+  padding-top: 20px;
+}
+.trustpilot_review .swiper-slide{
+    border: 0.5px solid gray;
+    padding: 15px;
+}
+
+@media (max-width:768px){
+  .trustpilot_review .trustpilot_image{
+      max-width: 38px;
+  }
+  .trustpilot_review .trustpilot_star {
+    max-width: 100px;
+}
+  .trustpilot_review .trustpilot_date {
+    font-size: 12px;
+}
+}

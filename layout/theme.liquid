@@ -42,8 +42,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% assign html = settings.html | replace: '&gt;','>' %}
     {{ html }}
     {% endif %} 
-
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     {{ content_for_header }}
@@ -465,7 +465,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+    {% section 'footer-new' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
