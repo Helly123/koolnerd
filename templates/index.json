@@ -507,6 +507,15 @@
             "card_caption": "Okay @Belairbeautyclub thanks for the jacket, its FYE",
             "card_hair": ""
           }
+        },
+        "card_Yxez4N": {
+          "type": "Card",
+          "settings": {
+            "card_pic": "shopify://shop_images/46193176_211592813099504_6834131062516881075_n_large_5c43f997-b248-4103-81c2-354aeabcd0d2.jpg",
+            "card_name": "jollydes",
+            "card_caption": "Okay @Belairbeautyclub thanks for the jacket, its FYE",
+            "card_hair": ""
+          }
         }
       },
       "block_order": [
@@ -515,7 +524,8 @@
         "card_m7ry6V",
         "card_X8XagU",
         "card_zF6L8A",
-        "card_98cRhT"
+        "card_98cRhT",
+        "card_Yxez4N"
       ],
       "settings": {
         "Background_image": "shopify://shop_images/image_7.png",
