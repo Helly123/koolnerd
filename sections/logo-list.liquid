@@ -1,3 +1,4 @@
+{{ 'logo-bar.css' | asset_url | stylesheet_tag }}
 {% style %}
 .logo-bar--{{ section.id }} {
   opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
@@ -5,10 +6,10 @@
 {% endstyle %}
 
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
-
+<div class="logo_list">
 <div class="page-width" data-aos="logo__animation">
   {% if section.settings.title != blank %}
-    <div class="section-header">
+    <div class="section-header {{ section.settings.heading_position }}">
       <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
     </div>
   {% endif %}
@@ -28,6 +29,10 @@
                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
                 data-sizes="auto"
                 alt="{{ block.settings.image.alt }}">
+            {% elsif block.settings.svg_logo != blank %}
+            <div class="logo_bar_svg">
+            {{ block.settings.svg_logo }}
+            </div>
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
@@ -39,7 +44,7 @@
     </div>
   {% endif %}
 </div>
-
+</div>
 {% if section.settings.divider %}</div>{% endif %}
 
 
@@ -47,13 +52,33 @@
   {
     "name": "Logo list",
     "class": "index-section",
-    "max_blocks": 10,
+    "max_blocks": 6,
     "settings": [
       {
         "type": "text",
         "id": "title",
         "label": "Heading"
       },
+      {
+      "type": "select",
+      "id": "heading_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "heading position"
+    },
       {
         "type": "range",
         "id": "logo_opacity",
@@ -80,6 +105,11 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "html",
+            "id": "svg_logo",
+            "label": "SVG"
           },
           {
             "type": "url",
