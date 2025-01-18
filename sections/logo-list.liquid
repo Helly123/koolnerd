@@ -48,13 +48,16 @@
 {% if section.settings.divider %}</div>{% endif %}
 
 <script>
+  const addclass = () => {
   var section = document.querySelector('.logo_list');
   var sectionTop = section.getBoundingClientRect().top;
   var windowHeight = window.innerHeight;
-  console.log(sectionTop);
+  
    if (sectionTop < windowHeight){
      alert("success");
    }
+    };
+  window.addEventListener('scroll', addclass);
 </script>
 {% schema %}
   {
