@@ -473,7 +473,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_82.png",
-            "svg_logo": "",
+            "svg_logo": "gf",
             "link": ""
           }
         },
