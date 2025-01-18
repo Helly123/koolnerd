@@ -43,9 +43,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ html }}
     {% endif %} 
 
-    
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    
     {{ content_for_header }}
 
     {%- liquid
