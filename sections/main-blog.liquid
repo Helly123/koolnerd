@@ -16,20 +16,7 @@
   }
 {%- endstyle -%}
 
-<div class="blog_header page-width">
-  <ul class="menu site-nav">
-  {% for link in linklists.main-menu.links %}
-    <!-- <li>{{ link.title }}</li> -->
-  {% endfor %}
-    {%- for tag in blog.all_tags -%}
-      {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
-      <li>
-        <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
-      </li>
-    {%- endfor -%}
-    </ul>
-  
-</div>
+
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
