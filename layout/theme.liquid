@@ -373,6 +373,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     {{ content_for_header }}
   
+
   
     <script src="{{ '123vendor-scripts123.js' | asset_url | split: '?' | first }}?23423357" defer="defer"></script> 
     <script src="{{ '123theme123.js' | asset_url }}" defer="defer"></script>
@@ -394,7 +395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout" role="main">
       {{ content_for_layout }}
     </main>
 
