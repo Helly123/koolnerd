@@ -1,0 +1,274 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ {{ 'shop-instagram.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .shop-instagram-wrap {
+    background: url('{{ section.settings.Background_image | img_url:'master'}}') no-repeat bottom;
+    background-size: cover;
+     padding: 40px 0;
+  }
+  
+
+  @media screen and (max-width: 600px){
+    .shop-instagram-wrap{
+      padding: 35px 0;
+    }
+
+  }
+{% endstyle %}
+
+<div id="shop-instagram" class="shop-instagram-wrap">
+   <div class="shop-instagram-inner">
+      <div class="shop-instagram-inner2">
+         <div class="shop-instagram-inner3 align-spaced align-middle page-width">
+            <div class="shop_instagram_content" style="color:{{ section.settings.text_color }}">
+               <h2 class="h1" >
+                  {{ section.settings.shop-instragram-title }}
+               </h2>
+               {{ section.settings.shop-instragram-text }}
+               <div>
+                 {% if section.settings.button_lable != blank %}
+                  <a href="{{ section.settings.button_link }}" class="button shop_button" style="color:{{ section.settings.button_text_color }}; {% if section.settings.button_style == 'outline' %}outline:1px solid{{ section.settings.button_text_color }}; border-radius:{{ section.settings.border_radius }}px;  {% elsif section.settings.button_style == 'solid' %}background-color:{{  section.settings.button_background_color}}; border-radius:{{ section.settings.border_radius }}px;{% endif %}">{{ section.settings.button_lable }}</a>
+                 {% endif %}
+               </div>
+            </div>
+            <div class=" shop_instagram_slider">
+               <!-- Slider main container -->
+               <div class="swiper-container shop-instagram-swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                     {% for block in section.blocks %}
+                      {% case block.type %}
+                        {% when 'Card' %}
+                        
+                    <div class="swiper-slide">    
+                      <div class="flip-card">   
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">      
+                            <div class="instagram-slide">
+                              <a class="instagram-slide_image-wrap flex-video" href="#">
+                                <img src="{{ block.settings.card_pic | img_url: 'large' }}" role="presentation" />
+                              </a>
+                              <div class="instagram-slide_bottom_text">
+                                <div class="comment">
+                                  <b>{{ block.settings.card_name }}</b> {{ block.settings.card_caption }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip-card-back">
+                            <div class="cover"><img src="{{ block.settings.card_pic | img_url: 'large' }}" role="presentation"/></div>
+                            <div class="wrap">
+                               <div class="inner">
+                                 <div class="info">
+  
+                         <h2>
+                           {% assign handle = block.settings.card_hair %}
+                          {% assign product = all_products[handle]  %}
+                           {% if product.type == 'hair' %}
+                          {% assign titlearray = product.title | split: ' ' %}
+                          {% capture titlesize %}{{ titlearray | size  }}{% endcapture %}
+                          {% assign titlesize = titlesize | minus: 2 %}
+                          {% for word in titlearray %}
+                           {% if forloop.first == true %}
+                              <span class="last-words"> 
+                           {% endif %}           
+                           {% if word == titlearray[1] %}
+                           {{ word }}</span>
+                           {% else %}
+                           {{ word }}
+                           {% endif %}
+                           {% endfor %}
+                           {% else %}
+                             <span class="last-words"> {{ product.type }}</span>
+                             {{ product.title }}
+                           {% endif %}
+                         </h2> 
+                                 <div class="buttons">
+                                   <a href="{{ product.url }}">
+                                     View this {{ product.type }}
+                                   </a>    
+                                 </div>                          
+                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      {% endcase %}
+                     {% endfor %}
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<script>
+	var myswiper = new Swiper(".shop-instagram-swiper", {
+		loop: true,
+		speed: 800,
+		slidesPerView: 1.5,
+		centeredSlides: true,
+		loopAdditionalSlides: 2,
+		effect: 'coverflow',
+		preventClicks: true,
+		slideToClickedSlide: true,
+      observeParents: true,
+		coverflowEffect: {
+			rotate: 0, 
+			stretch: 20,
+			depth: 200,
+			modifier: 2,
+			slideShadows: true, 
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: true,
+		},
+		grabCursor: true,
+		breakpoints: {
+			600: {
+				coverflowEffect: {
+					slideShadows: false,
+					stretch: 0,
+					depth: 200,
+					modifier: 2,
+				},
+				slidesPerView: 2.6, 
+
+			}
+		},
+	})
+
+</script>
+
+{% schema %}
+  {
+    "name": "Shop Instagram",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "Background_image",
+        "label": "Background image"
+      },
+      {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+        "default":"#ffffff"
+    },
+      {
+        "id": "shop-instragram-title",
+        "type": "richtext",
+        "label": "Intro text for section",
+"default": "<p>Steal her look</p><p>Wear it better</p>"
+      },
+      {
+        "id": "shop-instragram-text",
+        "type": "richtext",
+        "label": "Intro text for section",
+"default": "<p>Just tap on a post to instantly see what she did to acheive that look - no need to dive in her DM’s and play nice for her cheat codes ;)</p>"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_lable",
+        "label": "Button text"
+      },
+        {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style ",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default":"#000000"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    }
+], 
+  "blocks": [
+    {
+     "type": "Card",
+     "name": "Card",
+     "settings" : [
+      {
+       "id": "card_pic",
+       "type": "image_picker",
+       "label": "Image"
+      },
+      {
+       "id": "card_name",
+       "type": "text",
+       "label": "Instagram Name"
+      },
+      {
+       "id": "card_caption",
+       "type": "text",
+       "label": "Caption"
+      },
+      {
+       "id": "card_hair",
+       "type": "product",
+       "label": "Product"
+      }
+   
+     ]
+    }
+   ],
+    "presets": [
+      {
+        "name": "Shop Instagram"
+      }
+    ]
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
