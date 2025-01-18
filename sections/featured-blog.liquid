@@ -71,6 +71,7 @@
    <div class="center">
           <a href="{{ section.settings.blog.url }}"
             class="button link underlined-link"
+            style="background-color:{{ section.settings.btn_background_color }}; color:{{ section.settings.btn_text_color }};"
           >
             {{ 'sections.featured_blog.view_all' | t }}
           </a>
@@ -205,11 +206,27 @@
       "label": "t:sections.featured-blog.settings.show_author.label"
     },
     {
+      "type": "header",
+      "content": "View all button"
+    },
+    {
       "type": "checkbox",
       "id": "show_view_all",
       "default": true,
       "label": "t:sections.featured-blog.settings.show_view_all.label"
     },
+    {
+        "type": "color",
+        "id": "btn_background_color",
+        "label": "Background color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "btn_text_color",
+        "label": "Text color",
+        "default": "#fff"
+      },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
