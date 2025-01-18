@@ -387,7 +387,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "show_scroll_bar": false,
+        "show_scroll_bar": true,
         "hight": 300,
         "desktop_content_position": "center",
         "content_alignment": "center",
