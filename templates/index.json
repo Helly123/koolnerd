@@ -412,6 +412,8 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "btn_background_color": "#000",
+        "btn_text_color": "#fff",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -449,6 +451,21 @@
         "padding_bottom": 36
       }
     },
+    "shop_instagram_ikA79P": {
+      "type": "shop-instagram",
+      "settings": {
+        "Background_image": "shopify://shop_images/image_7.png",
+        "text_color": "#ffffff",
+        "shop-instragram-title": "<p>GRAB YOUR </p><p>BUSINESS IN A BOX.</p>",
+        "shop-instragram-text": "<p>Everything you need to start a winning brand with no experience.</p>",
+        "button_link": "#",
+        "button_lable": "Explore Belair",
+        "button_style": "solid",
+        "button_background_color": "#df5ddc",
+        "button_text_color": "#ffffff",
+        "border_radius": 50
+      }
+    },
     "featured_blog_DpKBJj": {
       "type": "featured-blog",
       "settings": {
@@ -462,6 +479,8 @@
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
+        "btn_background_color": "#000",
+        "btn_text_color": "#fff",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -558,6 +577,7 @@
     "rich_text_93qnVk",
     "featured_blog_M4ktFH",
     "featured_collection_fdUbbJ",
+    "shop_instagram_ikA79P",
     "featured_blog_DpKBJj",
     "logo_list_7Wjtw8",
     "newsletter_eFEGNQ"
