@@ -473,12 +473,12 @@
           "footer-new-1": {
             "type": "menu",
             "settings": {
-              "title_1": "BELAIR BEAUTY",
-              "menu_1": "customer-account-main-menu",
-              "title_2": "NEED HELP",
-              "menu_2": "main-menu",
-              "title_3": "Custom text",
-              "menu_3": "footer",
+              "title_1": "WHAT WE DO",
+              "menu_1": "footer-menu-one",
+              "title_2": "WHO WE SERVE",
+              "menu_2": "footer-menu-two",
+              "title_3": "WHY WE'RE DIFFERENT",
+              "menu_3": "footer-three",
               "social_icon_title": "CONNECT WITH US",
               "show_social_icons": true
             }
