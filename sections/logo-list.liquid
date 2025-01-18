@@ -6,7 +6,7 @@
 {% endstyle %}
 
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
-<div class="logo_list  ">
+<div class="logo_list">
 <div class="page-width" data-aos="logo__animation">
   {% if section.settings.title != blank %}
     <div class="section-header {{ section.settings.heading_position }}">
@@ -47,7 +47,14 @@
 </div>
 {% if section.settings.divider %}</div>{% endif %}
 
-
+<script>
+  const section = document.querySelector('.logo_list');
+  const sectionTop = section.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+   if (sectionTop < windowHeight){
+     console.log("success");
+   }
+</script>
 {% schema %}
   {
     "name": "Logo list",
