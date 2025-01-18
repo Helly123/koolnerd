@@ -981,5 +981,4 @@ $(".menu_tab").click(function(e) {
   $(this).addClass('menu_active_tab');
    $(".drawer__inner ").removeClass('active_tabify_drawer');
   $(".drawer__inner."+tabify).addClass('active_tabify_drawer');
-
 });
