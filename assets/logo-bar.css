@@ -33,9 +33,6 @@
   animation-delay: 2s,3.6s;
   animation-fill-mode: forwards;
 }
-.logo_list [data-aos=logo__animation] .logo-bar__item{
-  opacity:1;
-}
 @keyframes growblurfade {
   0% {
     transform: scale(0); 
