@@ -59,3 +59,27 @@
     padding-bottom: 82.5rem;
   }
 }
+
+
+/**/
+@media screen and (min-width: 750px) {
+  .main-blog .blog-articles{
+     grid-template-columns: 1fr 1fr 1fr; 
+  }
+}
+.blog_header{
+    border-bottom: 2px solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.blog_header .menu li{
+  list-style:none;
+  padding:5px 10px;
+  margin:0;
+}
+.blog_header .menu{
+      display: flex;
+  flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
