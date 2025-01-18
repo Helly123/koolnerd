@@ -6,7 +6,7 @@
 {% endstyle %}
 
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
-<div class="logo_list">
+<div class="logo_list  ">
 <div class="page-width" data-aos="logo__animation">
   {% if section.settings.title != blank %}
     <div class="section-header {{ section.settings.heading_position }}">
@@ -17,7 +17,7 @@
   {% if section.blocks.size > 0 %}
     <div class="logo-bar logo-bar--{{ section.id }}">
       {% for block in section.blocks %}
-        <div class="logo-bar__item" {{ block.shopify_attributes }}>
+        <div class="logo-bar__item {% if block.settings.link != blank and block.settings.svg_logo != blank %} placeholder_image{% endif %}" {{ block.shopify_attributes }}>
           {% if block.settings.link != blank %}
             <a href="{{ block.settings.link }}" class="logo-bar__link">
           {% endif %}
