@@ -86,3 +86,9 @@
   }
 }
 
+
+
+/**/
+.blog {
+  --grid-desktop-horizontal-spacing:0px;
+}
