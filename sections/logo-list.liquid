@@ -24,7 +24,7 @@
           {% if block.settings.image != blank %}
             {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
             <img class="logo-bar__image lazyload"
-                data-src="{{ img_url }}"
+                src="{{ img_url }}"
                 data-widths="[180, 360, 540, 720]"
                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
                 data-sizes="auto"
@@ -54,7 +54,7 @@
   var windowHeight = window.innerHeight;
   
    if (sectionTop < windowHeight){
-     // section.querySelector(".page-width").classList.add("aos-animate");
+     section.querySelector(".page-width").classList.add("aos-animate");
    }
     };
   window.addEventListener('scroll', addclass);
