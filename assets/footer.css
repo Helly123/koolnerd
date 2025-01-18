@@ -78,4 +78,7 @@
     width: 18px;
     height: 18px;
   }
+  .footer .footer_logo{
+      margin-top: -10px;
+}
 }
