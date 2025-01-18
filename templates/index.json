@@ -466,6 +466,51 @@
         "padding_bottom": 36
       }
     },
+    "logo_list_7Wjtw8": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_UAEXtY": {
+          "type": "logo_image",
+          "settings": {
+            "svg_logo": "",
+            "link": ""
+          }
+        },
+        "logo_image_TpYCYD": {
+          "type": "logo_image",
+          "settings": {
+            "svg_logo": "",
+            "link": ""
+          }
+        },
+        "logo_image_mVtdVr": {
+          "type": "logo_image",
+          "settings": {
+            "svg_logo": "",
+            "link": ""
+          }
+        },
+        "logo_image_KzynYe": {
+          "type": "logo_image",
+          "settings": {
+            "svg_logo": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_UAEXtY",
+        "logo_image_TpYCYD",
+        "logo_image_mVtdVr",
+        "logo_image_KzynYe"
+      ],
+      "settings": {
+        "title": "WE'VE BEEN SEEN & FEATURED IN",
+        "heading_position": "center",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    },
     "newsletter_eFEGNQ": {
       "type": "newsletter",
       "blocks": {
@@ -510,6 +555,7 @@
     "featured_blog_M4ktFH",
     "featured_collection_fdUbbJ",
     "featured_blog_DpKBJj",
+    "logo_list_7Wjtw8",
     "newsletter_eFEGNQ"
   ]
 }
