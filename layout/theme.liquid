@@ -298,8 +298,97 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
+
+    <script>
+      function _0x448b() {
+        var _0x582ded = [
+            '{{ \'cart.general.empty\' | t | json }}',  // Replacing 'value_cartEmpty'
+            '683809HUfqQw',
+            'className',
+            'no-js',
+            '1GcOfcO',
+            '{{ \'shop.money_format\' | json }}',  // Replacing 'value_moneyFormat'
+            '{{ \'products.product.sold_out\' | t | json }}',  // Replacing 'value_soldOut'
+            '1635370SnYRAL',
+            'strings',
+            '{{ \'cart.general.terms_confirm\' | t | json }}',  // Replacing 'value_cartTermsConfirmation'
+            '648WLwgwY',
+            '{{ \'settings.product_save_type\' | json }}',  // Replacing 'value_saveType'
+            '{{ \'cart.general.savings_html\' | t: savings: \'[savings]\' | json }}',  // Replacing 'value_cartSavings'
+            '{{ \'products.product.stock_label\' | t: count: \'[count]\' | json }}',  // Replacing 'value_stockLabel'
+            '365682yKtDCV',
+            '{{ \'products.product.add_to_cart\' | t | json }}',  // Replacing 'value_addToCart'
+            '6Nfhugc',
+            '302154eTLXdY',
+            '{{ \'settings.cart_type\' | json }}',  // Replacing 'value_cartType'
+            '3247870uOmfJD',
+            'settings',
+            '{{ \'products.product.unavailable\' | t | json }}',  // Replacing 'value_unavailable'
+            '32776YrFCFy',
+            '8491824jORIuB',
+            'documentElement',
+            '4qlKyLJ',
+            'replace',
+            'theme',
+            '{{ \'settings.variant_type\' | json }}'  // Replacing 'value_dynamicVariantType'
+        ];
+        _0x448b = function () {
+            return _0x582ded;
+        };
+        return _0x448b();
+    }
+    var _0x3f2e21 = _0x28b8;
+    (function (_0x414fc1, _0x583f39) {
+        var _0x1a1f55 = _0x28b8;
+        var _0x2bb7b2 = _0x414fc1();
+        while (!![]) {
+            try {
+                var _0xdc3638 = -parseInt(_0x1a1f55(0x142)) / 0x1 * (parseInt(_0x1a1f55(0x14c)) / 0x2) + parseInt(_0x1a1f55(0x14f)) / 0x3 * (-parseInt(_0x1a1f55(0x157)) / 0x4) + -parseInt(_0x1a1f55(0x145)) / 0x5 + parseInt(_0x1a1f55(0x14e)) / 0x6 * (parseInt(_0x1a1f55(0x15c)) / 0x7) + parseInt(_0x1a1f55(0x154)) / 0x8 * (parseInt(_0x1a1f55(0x148)) / 0x9) + -parseInt(_0x1a1f55(0x151)) / 0xa + parseInt(_0x1a1f55(0x155)) / 0xb;
+                if (_0xdc3638 === _0x583f39) {
+                    break;
+                } else {
+                    _0x2bb7b2['push'](_0x2bb7b2['shift']());
+                }
+            } catch (_0x1c910a) {
+                _0x2bb7b2['push'](_0x2bb7b2['shift']());
+            }
+        }
+    }(_0x448b, 0x37f73));
+    function _0x28b8(_0x52bea1, _0x1e6df3) {
+        var _0x448bb5 = _0x448b();
+        _0x28b8 = function (_0x28b82d, _0x11d61f) {
+            _0x28b82d = _0x28b82d - 0x141;
+            var _0x467016 = _0x448bb5[_0x28b82d];
+            return _0x467016;
+        };
+        return _0x28b8(_0x52bea1, _0x1e6df3);
+    }
+    document[_0x3f2e21(0x156)][_0x3f2e21(0x15d)] = document[_0x3f2e21(0x156)]['className'][_0x3f2e21(0x158)](_0x3f2e21(0x141), 'js');
+    window[_0x3f2e21(0x159)] = window[_0x3f2e21(0x159)] || {};
+    theme[_0x3f2e21(0x146)] = {
+        'addToCart': '{{ \'products.product.add_to_cart\' | t | json }}',
+        'soldOut': '{{ \'products.product.sold_out\' | t | json }}',
+        'unavailable': '{{ \'products.product.unavailable\' | t | json }}',
+        'stockLabel': '{{ \'products.product.stock_label\' | t: count: \'[count]\' | json }}',
+        'savePrice': '{{ \'products.general.save_html\' | t: saved_amount: \'[saved_amount]\' | json }}',
+        'cartSavings': '{{ \'cart.general.savings_html\' | t: savings: \'[savings]\' | json }}',
+        'cartEmpty': '{{ \'cart.general.empty\' | t | json }}',
+        'cartTermsConfirmation': '{{ \'cart.general.terms_confirm\' | t | json }}'
+    };
+    theme[_0x3f2e21(0x152)] = {
+        'dynamicVariantsEnable': true,
+        'dynamicVariantType': '{{ settings.variant_type | json }}',
+        'cartType': '{{ settings.cart_type | json }}',
+        'moneyFormat': '{{ shop.money_format | json }}',
+        'saveType': '{{ settings.product_save_type | json }}',
+        'recentlyViewedEnabled': false,
+        'quickView': '{{ settings.quick_shop_enable }}',
+        'themeVersion': '2.0'
+    };  
+    </script>
   
     {{ content_for_header }}
+  
   
     <script src="{{ '123vendor-scripts123.js' | asset_url | split: '?' | first }}?23423357" defer="defer"></script>
   
