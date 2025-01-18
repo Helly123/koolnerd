@@ -472,6 +472,7 @@
         "logo_image_UAEXtY": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_82.png",
             "svg_logo": "",
             "link": ""
           }
@@ -479,6 +480,7 @@
         "logo_image_TpYCYD": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_83.png",
             "svg_logo": "",
             "link": ""
           }
@@ -486,6 +488,7 @@
         "logo_image_mVtdVr": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_84.png",
             "svg_logo": "",
             "link": ""
           }
@@ -493,6 +496,7 @@
         "logo_image_KzynYe": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_83.png",
             "svg_logo": "",
             "link": ""
           }
