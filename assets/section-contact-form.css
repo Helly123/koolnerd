@@ -47,7 +47,10 @@
 .contact .form-dropdwon .dropdown-arrow {
   position: absolute;
   right: 10px;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: -1;
+  max-width: 30px;
+  height: 30px;
+  width: 100%;
 }
