@@ -45,10 +45,8 @@
   text-transform: uppercase;
   letter-spacing: .2em;
   font-size: .8em;
-}
-.contact .form-dropdwon select option{
-   letter-spacing: .2em;
-    font-size: .8em;
+  padding-bottom: 12px;
+ padding-left: 19px;
 }
 .contact .form-dropdwon .dropdown-arrow {
   position: absolute;
