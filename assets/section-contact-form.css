@@ -39,17 +39,15 @@
 }
 
 /**/
-.contact select {
+.contact .form-dropdwon select {
   width: 100%;
   position: relative;
 }
 
-
-.contact  .dropdown-arrow {
+.contact .form-dropdwon .dropdown-arrow {
   position: absolute;
   right: 10px;
   top: 60%;
   transform: translateY(-50%);
   z-index: -1;
 }
-
