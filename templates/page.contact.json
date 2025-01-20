@@ -22,7 +22,7 @@
         "text_6R8RPJ": {
           "type": "text",
           "settings": {
-            "required": true,
+            "required": false,
             "text": "Select your hobbies",
             "dropdown_content-1": "Cricket",
             "dropdown_content-2": "Swimming",
