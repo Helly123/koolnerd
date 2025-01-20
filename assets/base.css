@@ -3131,8 +3131,6 @@ details-disclosure > details {
 }
 .collection_menu_inner .collection_menu_image_cover img{
   border-radius: 5px;
-  height: 100%;
-  object-fit: cover;
 }
 .collection_menu_inner .collection_menu_image_cover:nth-child(1){
   width: 50%;
