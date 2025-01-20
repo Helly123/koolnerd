@@ -19,13 +19,13 @@
     "form": {
       "type": "contact-form",
       "blocks": {
-        "text_TzRJBC": {
+        "text_6R8RPJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Select your hobbies</p>",
-            "dropdown_content-1": "cricket",
-            "dropdown_content-2": "swinging",
-            "dropdown_content-3": "football",
+            "text": "Select your hobbies",
+            "dropdown_content-1": "Cricket",
+            "dropdown_content-2": "",
+            "dropdown_content-3": "",
             "dropdown_content-4": "",
             "dropdown_content-5": "",
             "dropdown_content-6": "",
@@ -34,7 +34,7 @@
         }
       },
       "block_order": [
-        "text_TzRJBC"
+        "text_6R8RPJ"
       ],
       "settings": {
         "heading": "",
