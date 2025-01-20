@@ -149,7 +149,7 @@
           {% if card_product.metafields.custom.review__rating != blank %}
             <div class="custom_rating">
               {% assign review_rate = card_product.metafields.custom.review__rating | round %}
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="auto" viewBox="0 0 512 96" version="1.1">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" viewBox="0 0 512 96" version="1.1">
                         <g id="Trustpilot_ratings_5star-RGB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g fill-rule="nonzero">                          
                                 <rect id="Rectangle-path" fill="{% if review_rate > 0 %}#00B67A{% else %}#DCDCE6{% endif %}" x="0" y="0" width="96" height="96"/>
