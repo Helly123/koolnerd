@@ -54,3 +54,9 @@
   height: 30px;
   width: 100%;
 }
+
+.contact .form-dropdwon .label{
+      text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
