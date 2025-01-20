@@ -83,10 +83,10 @@
         </textarea>
         <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
       </div>
-            <div class="field field__input">
+            <div class="field ">
           {% for block in section.blocks %}
     {% if block.type == 'text' %}
-      <select name="contact[{{ block.settings.text }}]" class="">
+      <select name="contact[{{ block.settings.text }}]" class="field__input">
   {% if block.settings.text != blank %}
     <option disabled selected class="field__label">{{ block.settings.text }}</option>
   {% endif %}
