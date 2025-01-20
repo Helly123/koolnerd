@@ -86,7 +86,7 @@
             <div class="field ">
           {% for block in section.blocks %}
     {% if block.type == 'text' %}
-      <select name="contact[{{ block.settings.text }}]" class="">
+      <select name="contact[{{ block.settings.text }}]">
   {% if block.settings.text != blank %}
     <option disabled selected class="field__label">{{ block.settings.text }}</option>
   {% endif %}
