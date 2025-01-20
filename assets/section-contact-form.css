@@ -44,13 +44,11 @@
   position: relative;
   text-transform: uppercase;
   letter-spacing: .2em;
-  font-size: .8em;
+  font-size: .8em !important;
   padding-bottom: 12px;
     padding-left: 19px;
 }
 .contact .form-dropdwon select option{
-   letter-spacing: .2em;
-    font-size: .8em;
   text-transform: capitalize;
 }
 .contact .form-dropdwon .dropdown-arrow {
