@@ -74,33 +74,33 @@
       <div class="field form-dropdwon">
           {% for block in section.blocks %}
     {% if block.type == 'text' %}
-      <select name="contact[{{ block.settings.text }}]">
+      <select name="contact[{{ block.settings.text }}]" class="label">
   {% if block.settings.text != blank %}
-    <option disabled selected value="="" class="field__label">{{ block.settings.text }}</option>
+    <option disabled selected value="" class="field__label label">{{ block.settings.text }}</option>
   {% endif %}
   
   {% if block.settings.dropdown_content-1 != blank or block.settings.dropdown_content-2 != blank or block.settings.dropdown_content-3 != blank or block.settings.dropdown_content-4 != blank or block.settings.dropdown_content-5 != blank or block.settings.dropdown_content-6 != blank or block.settings.dropdown_content-7 != blank %}
   
     {% if block.settings.dropdown_content-1 != blank %} 
-      <option value="{{ block.settings.dropdown_content-1 }}">{{ block.settings.dropdown_content-1 }}</option>
+      <option value="{{ block.settings.dropdown_content-1 }}" class="label">{{ block.settings.dropdown_content-1 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-2 != blank %}
-      <option value="{{ block.settings.dropdown_content-2 }}">{{ block.settings.dropdown_content-2 }}</option>
+      <option value="{{ block.settings.dropdown_content-2 }}" class="label">{{ block.settings.dropdown_content-2 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-3 != blank %}
-      <option value="{{ block.settings.dropdown_content-3 }}">{{ block.settings.dropdown_content-3 }}</option>
+      <option value="{{ block.settings.dropdown_content-3 }}" class="label">{{ block.settings.dropdown_content-3 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-4 != blank %}
-      <option value="{{ block.settings.dropdown_content-4 }}">{{ block.settings.dropdown_content-4 }}</option>
+      <option value="{{ block.settings.dropdown_content-4 }}" class="label">{{ block.settings.dropdown_content-4 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-5 != blank %}
-      <option value="{{ block.settings.dropdown_content-5 }}">{{ block.settings.dropdown_content-5 }}</option>
+      <option value="{{ block.settings.dropdown_content-5 }}" class="label">{{ block.settings.dropdown_content-5 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-6 != blank %}
-      <option value="{{ block.settings.dropdown_content-6 }}">{{ block.settings.dropdown_content-6 }}</option>
+      <option value="{{ block.settings.dropdown_content-6 }}" class="label">{{ block.settings.dropdown_content-6 }}</option>
     {% endif %}
     {% if block.settings.dropdown_content-7 != blank %}
-      <option value="{{ block.settings.dropdown_content-7 }}">{{ block.settings.dropdown_content-7 }}</option>
+      <option value="{{ block.settings.dropdown_content-7 }}" class="label">{{ block.settings.dropdown_content-7 }}</option>
     {% endif %}
   
   {% endif %}
