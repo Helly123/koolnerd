@@ -83,6 +83,47 @@
         </textarea>
         <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
       </div>
+            <div class="field custom-dropdown">
+          {% for block in section.blocks %}
+    {% if block.type == 'text' %}
+      <select name="contact[{{ block.settings.text }}]">
+  {% if block.settings.text != blank %}
+    <option disabled selected>{{ block.settings.text }}</option> <!-- Label inside the select -->
+  {% endif %}
+  
+  {% if block.settings.dropdown_content-1 != blank or block.settings.dropdown_content-2 != blank or block.settings.dropdown_content-3 != blank or block.settings.dropdown_content-4 != blank or block.settings.dropdown_content-5 != blank or block.settings.dropdown_content-6 != blank or block.settings.dropdown_content-7 != blank %}
+  
+    {% if block.settings.dropdown_content-1 != blank %} 
+      <option value="{{ block.settings.dropdown_content-1 }}">{{ block.settings.dropdown_content-1 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-2 != blank %}
+      <option value="{{ block.settings.dropdown_content-2 }}">{{ block.settings.dropdown_content-2 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-3 != blank %}
+      <option value="{{ block.settings.dropdown_content-3 }}">{{ block.settings.dropdown_content-3 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-4 != blank %}
+      <option value="{{ block.settings.dropdown_content-4 }}">{{ block.settings.dropdown_content-4 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-5 != blank %}
+      <option value="{{ block.settings.dropdown_content-5 }}">{{ block.settings.dropdown_content-5 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-6 != blank %}
+      <option value="{{ block.settings.dropdown_content-6 }}">{{ block.settings.dropdown_content-6 }}</option>
+    {% endif %}
+    {% if block.settings.dropdown_content-7 != blank %}
+      <option value="{{ block.settings.dropdown_content-7 }}">{{ block.settings.dropdown_content-7 }}</option>
+    {% endif %}
+  
+  {% endif %}
+</select>
+      <div class="dropdown-arrow">
+    {% render 'down-arrow' %}
+      </div>
+
+    {% endif %}
+{% endfor %}
+      </div>
       <div class="contact__button">
         <button type="submit" class="button">
           {{ 'templates.contact.form.send' | t }}
@@ -177,6 +218,55 @@
       "default": 36
     }
   ],
+   "blocks": [
+    {
+        "type": "text",
+      "name":"Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-1",
+          "label": "Option Text 1"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-2",
+          "label": "Option Text 2"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-3",
+          "label": "Option Text 3"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-4",
+          "label": "Option Text 4"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-5",
+          "label": "Option Text 5"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-6",
+          "label": "Option Text 6"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_content-7",
+          "label": "Option Text 7"
+        }
+      ]
+    }
+   ],
   "presets": [
     {
       "name": "t:sections.contact-form.presets.name"
