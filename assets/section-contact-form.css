@@ -39,15 +39,13 @@
 }
 
 /**/
-.contact .custom-dropdown select {
+.contact select {
   width: 100%;
   position: relative;
 }
-.contact .field.custom-dropdown{
-  max-width: 50%;
-}
 
-.contact .custom-dropdown .dropdown-arrow {
+
+.contact  .dropdown-arrow {
   position: absolute;
   right: 10px;
   top: 60%;
@@ -55,7 +53,3 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 749px) {
-.contact .field.custom-dropdown{
-  max-width: 100%;
-}
