@@ -23,7 +23,7 @@
           "type": "text",
           "settings": {
             "required": false,
-            "text": "Select your hobbies",
+            "text": "Select your hobby",
             "dropdown_content-1": "Cricket",
             "dropdown_content-2": "Swimming",
             "dropdown_content-3": "Reading",
