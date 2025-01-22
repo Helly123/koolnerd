@@ -3219,3 +3219,6 @@ details-disclosure > details {
 .collection .custom_rating .rating {
     font-size: 18px;
 }
+html{
+  scroll-behavior:smooth;
+}
