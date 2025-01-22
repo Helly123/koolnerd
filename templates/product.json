@@ -107,6 +107,37 @@
             "page": ""
           }
         },
+        "review_KtwKTE": {
+          "type": "review",
+          "settings": {
+            "heading": "Review",
+            "trustpilot_pic": "shopify://shop_images/20066992_104279283573647_8877413769781706752_n_large_large_b30c6703-b4c6-47a1-b096-56126ea1019e.jpg",
+            "trustpilot_name": "Jasmine Ray",
+            "trustpilot_date": "3 months ago",
+            "trustpilot_caption": "Both experiences have been amazing!",
+            "trustpilot_rating": "5",
+            "trustpilot_pic_2": "shopify://shop_images/15625464_1812880418959931_7955431119082487808_n_large_large_01b1a3fe-c8a7-4573-94f3-2532c9391436.jpg",
+            "trustpilot_name_2": "Jasmine Ray",
+            "trustpilot_date_2": "3 months ago",
+            "trustpilot_caption_2": "Both experiences have been amazing!",
+            "trustpilot_rating_2": "4",
+            "trustpilot_pic_3": "shopify://shop_images/17494834_305626783217803_7862175224328880128_n_large_large_361e6ccb-2144-4494-a2a4-cf62ec20c7be.jpg",
+            "trustpilot_name_3": "Jasmine Ray",
+            "trustpilot_date_3": "3 months ago",
+            "trustpilot_caption_3": "Both experiences have been amazing!",
+            "trustpilot_rating_3": "3",
+            "trustpilot_pic_4": "shopify://shop_images/46193176_211592813099504_6834131062516881075_n_large_5c43f997-b248-4103-81c2-354aeabcd0d2.jpg",
+            "trustpilot_name_4": "Jasmine Ray",
+            "trustpilot_date_4": "3 months ago",
+            "trustpilot_caption_4": "Both experiences have been amazing!",
+            "trustpilot_rating_4": "4",
+            "trustpilot_pic_5": "shopify://shop_images/20067339_1091471814286084_5859430548274937856_n_large_f6fd2d81-9ba6-45dd-8cda-df015bead525.jpg",
+            "trustpilot_name_5": "Jasmine Ray",
+            "trustpilot_date_5": "3 months ago",
+            "trustpilot_caption_5": "Both experiences have been amazing!",
+            "trustpilot_rating_5": "3"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -129,6 +160,7 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "collapsible-row-1",
+        "review_KtwKTE",
         "share"
       ],
       "settings": {
