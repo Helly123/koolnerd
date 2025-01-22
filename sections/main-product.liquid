@@ -922,6 +922,10 @@
                      </details>
             </div>
               <script>
+                document.querySelector('.product_custom_rating').addEventListener('click', function(){
+                    this.closest(".product__info-wrapper").querySelector(".accordion#review details").setAttribute("open", " ");
+                  });
+                
                 var swiper = new Swiper(".product_slider_cover", {
                   grabCursor: true,
                   slidesPerView: 3,
