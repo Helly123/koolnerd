@@ -3,6 +3,10 @@
 .logo-bar--{{ section.id }} {
   opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
 }
+  {% if section.settings.css != nil %}
+{% assign css = section.settings.css | replace: '&gt;','>' %}
+{{ css }}
+{% endif %}
 {% endstyle %}
 
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
@@ -111,6 +115,11 @@
         "id": "divider",
         "label": "Show section divider",
         "default": false
+      },
+      {
+        "id": "css",
+        "type": "html",
+        "label": "Custom CSS"
       }
     ],
     "blocks": [
