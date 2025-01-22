@@ -38,7 +38,9 @@
   margin:0;
   margin-bottom:30px;
 }
-
+.article-template .feature_blog.hide ~ .main_artical{
+  width:100%;
+}
 @media screen and (max-width: 749px) {
   .article-template .feature_blog{
     display:none;
