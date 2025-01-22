@@ -338,6 +338,7 @@
               </p>
             {% when 'custom_rating' %}            
             {% if product.metafields.custom.review__rating != blank %}
+              <a class="product_custom_rating" href="#review"> 
               <div class="custom_rating">
               {% assign review_rate = product.metafields.custom.review__rating | round %}
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" viewBox="0 0 512 96" version="1.1">
@@ -361,6 +362,7 @@
                   <span class="review_count">({{ product.metafields.custom.review_count }})</span>
                 </span>
               </div>
+              </a>
             {% endif %}
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
