@@ -3,7 +3,7 @@
 
 <article class="article-template page-width" itemscope itemtype="http://schema.org/BlogPosting">
   
-  <div class="feature_blog">
+  <div class="feature_blog {% unless section.settings.show_feature_blog %} hide{% endunless %}{% if blogs['news'].articles.size <= 1 %} hide {% endif %}">
   {% render 'new-article-card' %}
   </div>
   <div class="main_artical">
@@ -299,6 +299,14 @@
   "name": "t:sections.main-article.name",
   "tag": "section",
   "class": "section",
+    "settings": [
+    {
+          "type": "checkbox",
+          "id": "show_feature_blog",
+          "default": true,
+          "label": "Show feature blog"
+        }
+  ],
   "blocks": [
     {
       "type": "@app"
