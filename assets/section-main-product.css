@@ -1248,3 +1248,44 @@ a.product__text {
   margin-left: 1.2rem;
   flex-shrink: 0;
 }
+
+.product_trustpilot_reviews .trustpilot_image_content_cover {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.product_trustpilot_reviews .trustpilot_image {
+    width: 100%;
+    max-width: 50px;
+}
+.product_trustpilot_reviews .trustpilot_image img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.product_trustpilot_reviews .trustpilot_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.product_trustpilot_reviews .trustpilot_date {
+    font-size: 14px;
+}
+.product_trustpilot_reviews .trustpilot_star {
+    max-width: 120px;
+}
+.product_trustpilot_reviews .trustpilot_star svg {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.product_trustpilot_reviews .swiper-slide {
+    border: .5px solid gray;
+    padding: 15px;
+}
+.product_trustpilot_reviews .poweredby_cover {
+    padding-top: 20px;
+}
