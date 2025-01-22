@@ -1,0 +1,13 @@
+
+{% for blog_article in blogs.news.articles limit: 4  %}
+  {% unless blog_article.handle == article.handle %}
+  <div class="article_card_wrap">
+    <a href="{{ blog_article.url }}">
+    {% if blog_article.image %}
+      {{ blog_article | image_url: width: 1500 | image_tag }}
+    {% endif %}
+     <div class="article_title">{{ blog_article.title }}</div>
+      </a>
+    </div>
+    {% endunless %}
+{% endfor %}
