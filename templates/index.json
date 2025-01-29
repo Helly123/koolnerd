@@ -612,14 +612,14 @@
         "heading_7VJVpt": {
           "type": "heading",
           "settings": {
-            "heading": "Join ||12000|| our mailing list and stay updated"
+            "heading": "Join ||12000|| our mailing list and stay updated<div>join</div>"
           }
         },
         "email_form_eXDCBn": {
           "type": "email_form",
           "settings": {
-            "button_text": "#fff",
-            "button_background": "#000",
+            "button_text": "#ffffff",
+            "button_background": "#000000",
             "HTML": ""
           }
         }
@@ -630,8 +630,8 @@
       ],
       "settings": {
         "full_width": false,
-        "text_color": "#000",
-        "background_color": "#fff",
+        "text_color": "#000000",
+        "background_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 52
       }
