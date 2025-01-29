@@ -26,13 +26,13 @@
           "settings": {
             "title_1": "WHAT WE DO",
             "menu_1": "footer-menu-one",
-            "show_horizontal_menu": false,
+            "show_horizontal_menu": true,
             "title_2": "WHO WE SERVE",
-            "menu_2": "footer-menu-two",
+            "menu_2": "",
             "title_3": "WHY WE'RE DIFFERENT",
-            "menu_3": "footer-three",
+            "menu_3": "",
             "social_icon_title": "CONNECT WITH US",
-            "show_social_icons": true
+            "show_social_icons": false
           }
         },
         "logo_social_HMbMkc": {
@@ -50,7 +50,7 @@
         "logo_social_HMbMkc"
       ],
       "settings": {
-        "show_payment_icons": false,
+        "show_payment_icons": true,
         "show_copyright": true,
         "background_color": "#ffffff",
         "text_color": "#000000",
