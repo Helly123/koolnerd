@@ -22,7 +22,14 @@
       {%- case block.type -%}
         {%- when 'heading' -%}
         <div class="grid__item">
-          <h2 class="heading" {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
+          {% assign heading = block.settings.heading %}
+          {% assign number = heading | split: "||" %}
+          {% assign extracted_number = number[1] %}
+          {% capture left_to_spend %}
+            <span id="dynamic-counter" data-count="{{ extracted_number }}" class="scroll-count-section"></span> 
+          {% endcapture %}
+          {% assign main_heading = heading | replace: "||" | replace: extracted_number, left_to_spend %}
+          <h2 class="heading" {{ block.shopify_attributes }}>{{ main_heading }}</h2>
         </div>
         {%- when 'email_form' -%}
         {% if block.settings.HTML == blank %}
@@ -170,9 +177,9 @@
         {
           "type": "textarea",
           "id": "heading",
-          "default": "Subscribe to our emails",
+          "default": "Join ||12000|| our mailing list and stay updated",
           "label": "t:sections.newsletter.blocks.heading.settings.heading.label",
-          "info": "please add this code for count number and add number <span id='dynamic-counter' data-count='1000' class='scroll-count-section'></span>"
+          "info": "Use ||1000|| to display counter number"
         }
       ]
     },
