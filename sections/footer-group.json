@@ -17,27 +17,37 @@
         "title_YXRa99": {
           "type": "title",
           "settings": {
-            "heading": "",
+            "heading": "BTW, HERE'S SOME MORE LINKS TO COOL THINGS...",
             "text_alignment": "center"
           }
         },
         "menu_a4zqBK": {
           "type": "menu",
           "settings": {
-            "title_1": "",
-            "menu_1": "footer",
-            "title_2": "",
-            "menu_2": "footer",
-            "title_3": "Custom text",
-            "menu_3": "footer",
-            "social_icon_title": "Custom text",
-            "show_social_icons": false
+            "title_1": "WHAT WE DO",
+            "menu_1": "footer-menu-one",
+            "show_horizontal_menu": false,
+            "title_2": "WHO WE SERVE",
+            "menu_2": "footer-menu-two",
+            "title_3": "WHY WE'RE DIFFERENT",
+            "menu_3": "footer-three",
+            "social_icon_title": "CONNECT WITH US",
+            "show_social_icons": true
+          }
+        },
+        "logo_social_HMbMkc": {
+          "type": "logo_social",
+          "settings": {
+            "logo": "shopify://shop_images/ahc-logo-bt_1.png",
+            "desktop_logo_height": 70,
+            "logo_position": "center"
           }
         }
       },
       "block_order": [
         "title_YXRa99",
-        "menu_a4zqBK"
+        "menu_a4zqBK",
+        "logo_social_HMbMkc"
       ],
       "settings": {
         "show_payment_icons": false,
