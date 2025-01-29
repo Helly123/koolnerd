@@ -26,13 +26,13 @@
           "settings": {
             "title_1": "WHAT WE DO",
             "menu_1": "footer-menu-one",
-            "show_horizontal_menu": true,
+            "show_horizontal_menu": false,
             "title_2": "WHO WE SERVE",
-            "menu_2": "footer-menu-four",
+            "menu_2": "footer-menu-two",
             "title_3": "WHY WE'RE DIFFERENT",
-            "menu_3": "",
+            "menu_3": "footer-three",
             "social_icon_title": "CONNECT WITH US",
-            "show_social_icons": false
+            "show_social_icons": true
           }
         },
         "logo_social_HMbMkc": {
