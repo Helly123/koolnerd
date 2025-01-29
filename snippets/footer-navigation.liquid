@@ -14,11 +14,11 @@
 
 <div class="grid grid--{{ view }}-col-desktop grid--2-col-tablet-down">
   {% if linklists[block.settings.menu_1].links.size > 0 %}
-    <div class="grid__item">
+    <div class="grid__item {% if block.settings.show_horizontal_menu %} footer_horizontal_menu{% endif %}">
       {% if block.settings.title_1 != blank %}
         <div class="footer_title uppercase">{{ block.settings.title_1 }}</div>
       {% endif %}
-    <ul class="no-bullets site-footer__linklist {% if block.settings.show_horizontal_menu %} footer_horizontal_menu{% endif %}">
+    <ul class="no-bullets site-footer__linklist">
       {% for link in linklists[block.settings.menu_1].links %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
