@@ -58,8 +58,11 @@
 .footer .footer_logo{
       margin-top: -30px;
 }
+.footer .grid--1-col-desktop .footer_horizontal_menu .footer_title{
+  text-align:center;
+}
 @media screen and (min-width: 750px){
-  .footer .grid--1-col-desktop .site-footer__linklist.footer_horizontal_menu{
+  .footer .grid--1-col-desktop .footer_horizontal_menu .site-footer__linklist{
         display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +94,7 @@
   .footer .footer_logo{
       margin-top: -10px;
 }
-  .footer.grid--1-col-desktop .site-footer__linklist.footer_horizontal_menu{
+  .footer.grid--1-col-desktop .footer_horizontal_menu .site-footer__linklist{
         display: flex;
     flex-direction:column;
     align-items: center;
