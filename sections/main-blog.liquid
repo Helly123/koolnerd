@@ -16,6 +16,7 @@
   }
 {%- endstyle -%}
 {% if section.settings.show_filter %}
+{% if blog.all_tags != blank %}
 <div class="blog_header page-width">
   <div class="blog_mobile_menu_icon medium-hide large-up-hide">
     <div class="menu_icon">
@@ -51,6 +52,7 @@
     </ul>
   
 </div>
+{% endif %}
 {% endif %}
 
 {% if section.settings.show_breadcrumb %}
