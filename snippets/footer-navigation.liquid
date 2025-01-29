@@ -18,7 +18,7 @@
       {% if block.settings.title_1 != blank %}
         <div class="footer_title uppercase">{{ block.settings.title_1 }}</div>
       {% endif %}
-    <ul class="no-bullets site-footer__linklist">
+    <ul class="no-bullets site-footer__linklist {% if block.settings.show_horizontal_menu %} footer_horizontal_menu{% endif %}">
       {% for link in linklists[block.settings.menu_1].links %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
