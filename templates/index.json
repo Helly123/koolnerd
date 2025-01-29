@@ -606,32 +606,32 @@
         "css": ""
       }
     },
-    "newsletter_eFEGNQ": {
+    "newsletter_H9QWeq": {
       "type": "newsletter",
       "blocks": {
-        "heading_mgeKjE": {
+        "heading_7VJVpt": {
           "type": "heading",
           "settings": {
-            "heading": "Join ||10000|| Girls receiving FREE Gifts, Tips, & Prizes Every Month!"
+            "heading": "Join ||12000|| our mailing list and stay updated"
           }
         },
-        "email_form_4rNpyz": {
+        "email_form_eXDCBn": {
           "type": "email_form",
           "settings": {
-            "button_text": "#ffffff",
-            "button_background": "#000000",
+            "button_text": "#fff",
+            "button_background": "#000",
             "HTML": ""
           }
         }
       },
       "block_order": [
-        "heading_mgeKjE",
-        "email_form_4rNpyz"
+        "heading_7VJVpt",
+        "email_form_eXDCBn"
       ],
       "settings": {
         "full_width": false,
-        "text_color": "#000000",
-        "background_color": "#ffffff",
+        "text_color": "#000",
+        "background_color": "#fff",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -652,6 +652,6 @@
     "shop_instagram_ikA79P",
     "featured_blog_DpKBJj",
     "logo_list_PqKCLr",
-    "newsletter_eFEGNQ"
+    "newsletter_H9QWeq"
   ]
 }
