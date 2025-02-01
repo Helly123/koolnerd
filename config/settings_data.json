@@ -179,15 +179,10 @@
           "menu_collection_RqgUKM": {
             "type": "menu_collection",
             "settings": {
-              "image_1": "shopify://shop_images/full-lace-wigs-min_large_4de14d20-852d-47aa-8b62-3854b1bff14b.png",
               "link_1": "shopify://collections/body-wave",
-              "image_2": "shopify://shop_images/stylist-wigs-min_large_5e0b5fef-acd6-4fc5-89e3-687076ece940.jpg",
               "link_2": "shopify://collections/new",
-              "image_3": "shopify://shop_images/newdrip-min_large_63e173fc-1843-4bf3-a597-4505d696b37d.jpg",
               "link_3": "",
-              "image_4": "shopify://shop_images/mink-bundles-min_large_6d480450-9646-4620-aed9-495dcf192091.jpg",
               "link_4": "",
-              "image_5": "shopify://shop_images/Disruptor_large_7970ef68-2792-4a0b-8a1c-8fef6300105d.png",
               "link_5": ""
             }
           },
