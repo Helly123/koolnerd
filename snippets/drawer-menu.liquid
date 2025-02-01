@@ -18,10 +18,16 @@
         </button>
       </div>
       </div>
-      <div class="menu_tabs_cover">
-        <div id="main_menu_drawer" class="main_menu_cover menu_tab menu_active_tab">MENU</div>
-        <div id="drawer_collection_image_link_cover" class="collection_menu_cover menu_tab">COLLECTIONS</div>
-      </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'menu_collection' %}
+            {% if block.settings.image_1 != blank or  block.settings.image_2 != blank or block.settings.image_3 != blank or block.settings.image_4 != blank or block.settings.image_5 != blank  %}
+              <div class="menu_tabs_cover">
+                <div id="main_menu_drawer" class="main_menu_cover menu_tab menu_active_tab">MENU</div>
+                <div id="drawer_collection_image_link_cover" class="collection_menu_cover menu_tab">COLLECTIONS</div>
+              </div>
+             {% endif %}
+          {% endif %}
+        {% endfor %}
     </div>
   </div>
   <div class="drawer__inner main_menu_drawer active_tabify_drawer">
