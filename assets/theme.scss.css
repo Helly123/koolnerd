@@ -11924,3 +11924,11 @@ margin-top:-20px;
 .contact .field__input {
     border: 1px solid #000;
 }
+
+/**/
+.drawer__inner.drawer-fixed{
+  top: 53px;
+}
+.drawer__inner.drawer-fixed .mobile-nav__item:first-child {
+    border-top: 1px solid #000;
+}
