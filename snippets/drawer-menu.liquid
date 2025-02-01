@@ -30,8 +30,19 @@
         {% endfor %}
     </div>
   </div>
-  <div class="drawer__inner main_menu_drawer active_tabify_drawer">
-
+{% assign drawer_fixed = false %}
+{% for block in section.blocks %}
+  {% if block.type == 'menu_collection' %}
+    {% if block.settings.image_1 != blank or  
+          block.settings.image_2 != blank or  
+          block.settings.image_3 != blank or  
+          block.settings.image_4 != blank or  
+          block.settings.image_5 != blank %}
+      {% assign drawer_fixed = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+  <div class="drawer__inner main_menu_drawer active_tabify_drawer {% if drawer_fixed == false %}drawer-fixed{% endif %}">
     <ul class="mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}" role="navigation" aria-label="Primary">
       {% for link in main_menu.links %}
         {%- assign animation_row = animation_row | plus: 1 -%}
