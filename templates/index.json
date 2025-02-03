@@ -331,31 +331,31 @@
         "featured_collection_QE87ng": {
           "type": "featured_collection",
           "settings": {
-            "collection": "all-products"
+            "collection": "frontpage"
           }
         },
         "featured_collection_fMG6Kf": {
           "type": "featured_collection",
           "settings": {
-            "collection": "state-specified"
+            "collection": "frontpage"
           }
         },
         "featured_collection_dTANPP": {
           "type": "featured_collection",
           "settings": {
-            "collection": "manuel-customization"
+            "collection": "frontpage"
           }
         },
         "featured_collection_7RWwgk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "generic-templates"
+            "collection": "frontpage"
           }
         },
         "featured_collection_CNbgFJ": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         }
       },
