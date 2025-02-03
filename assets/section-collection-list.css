@@ -33,6 +33,9 @@
   .slider.collection-list--1-items {
     padding-bottom: 0;
   }
+  .collection_list .slider-swiper-wrapper{
+        margin: 0 15px;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
